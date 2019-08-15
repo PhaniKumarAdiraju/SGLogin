@@ -81,6 +81,20 @@ class LoginScreen extends React.Component {
                 Authentication Failed
               </Text>
             }
+            <View style={styles.row}>
+              <View style={styles.buttonContainer}>
+                <Button
+                  label="Forgot User?"
+                  onPress={() => {console.log('Forgot UserName')}}
+                />
+              </View>
+              <View style={styles.buttonContainer}>
+                <Button
+                  label="Sign Up"
+                  onPress={() => {console.log('SignUp')}}
+                />
+              </View>
+            </View>
           </View>
           <View style={styles.footer}>
             <Text>Powered by Stadium Goods</Text>
@@ -126,6 +140,16 @@ const styles = StyleSheet.create({
   },
   successMessage: {
     color: 'green'
+  },
+  row: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonContainer: {
+    flex: 1,
+    margin: 5,
   }
 
 });
